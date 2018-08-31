@@ -1,0 +1,94 @@
+[{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$GokZvYiKa5oX$bQJ0SeCCGOolzuvW6qlfD4TvalynJF1TxDTpYOOaWZs=",
+        "last_login": "2018-08-31T00:48:08.997Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-08-30T22:20:13.796Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$LMm5Gyci0Pgt$KRxXVYX1JDtrd6kbe+f6ac93D4DlyPybgmFm6kIwN8A=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "developer1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-08-30T22:24:22.346Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$4YJAcvqyO1SO$qul5G6CkqOhuwe0yW1urKdwlwTplHT1sTzoRaquxXFM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "developer2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-08-30T22:24:35.121Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task_list.task",
+    "pk": 1,
+    "fields": {
+        "name": "task for Admin",
+        "description": "very important first task",
+        "status": true,
+        "created": "2018-08-30T22:23:07.840Z",
+        "assigned": 3,
+        "done_by": null,
+        "done_date": null
+    }
+},
+{
+    "model": "task_list.task",
+    "pk": 2,
+    "fields": {
+        "name": "to do hot fix on edit page",
+        "description": "must to be implemented urgently",
+        "status": false,
+        "created": "2018-08-30T22:25:23.080Z",
+        "assigned": 2,
+        "done_by": null,
+        "done_date": null
+    }
+},
+{
+    "model": "task_list.task",
+    "pk": 3,
+    "fields": {
+        "name": "Make main page for company",
+        "description": "We must have a main page. Mockups are here",
+        "status": false,
+        "created": "2018-08-30T23:11:40.443Z",
+        "assigned": 1,
+        "done_by": null,
+        "done_date": null
+    }
+}
+]
