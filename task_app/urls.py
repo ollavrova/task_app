@@ -15,14 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.decorators import login_required
 from django.urls import path
 from task_list import views
+from task_list.views import TaskDetail, TaskUpdate, TaskDelete, TaskCreate, TaskDone
+from django.contrib.auth.decorators import login_required
+
 
 urlpatterns = [
-    path('', login_required(views.Home.as_view()), name='home'),
+    path('', views.TaskList.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('accounts/login/', auth_views.LoginView.as_view(), {'template_name': 'login.html'}, name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('tasks/detail/<int:pk>/', login_required(TaskDetail.as_view()), name='task-detail'),
+    path('tasks/edit/<int:pk>/', login_required(TaskUpdate.as_view()), name='task-edit'),
+    path('tasks/done/<int:pk>/', login_required(TaskDone.as_view()), name='task-done'),
+    path('tasks/delete/<int:pk>/', login_required(TaskDelete.as_view()), name='task-delete'),
+    path('tasks/create/', login_required(TaskCreate.as_view()), name='task-create'),
 
 ]

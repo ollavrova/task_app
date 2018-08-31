@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Task detail</h1>
+    <form method="post">{% csrf_token %}
+        <div class="contaner-fluid">
+            <p>Id: {{ object.id }}</p>
+            <p>Name: {{ object.name }}</p>
+            <p>Created: {{ object.created|date:"d.m.Y H:i" }}</p>
+            <p>Description: {{ object.description }}</p>
+            <p>Assigned: {{ object.assigned }}</p>
+            <p>Status: {{ status|yesno:"done,undone" }}</p>
+            {% if object.done_by %}
+                <p>Done by: {{ object.done_by }} </p>
+                <p>Done date: {{ object.done_date|date:"d.m.Y H:i" }} </p>
+            {% endif %}
+        </div>
+        <a href="{% url 'home' %}"><button type="button" class="save btn btn-default">Return</button></a>
+    </form>
+{% endblock %}
