@@ -3,7 +3,8 @@
     <h1>{{ title|title }} task:</h1>
     <form method="post">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">{{ button }}</button>
+        <button type="submit" class="save btn btn-success">{{ button }}</button>
+        <a href="{% url 'home' %}"><button type="button" class="save btn btn-default">Return</button></a>
     </form>
 
 {% endblock %}
