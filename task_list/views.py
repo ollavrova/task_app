@@ -75,7 +75,7 @@ class TaskUpdate(PostMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Edit '
+        context['title'] = 'Edit'
         context['button'] = 'Save'
         return super().get_context_data(**context)
 
@@ -91,7 +91,7 @@ class TaskDone(PostMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Mark task done '
+        context['title'] = 'Mark task done'
         context['button'] = 'Save'
         return super().get_context_data(**context)
 
