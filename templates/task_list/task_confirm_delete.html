@@ -6,8 +6,7 @@
         <a href="{% url 'task-delete' task.id %}">
             <button type="submit" class="save btn btn-danger">Yes, I'm sure</button>
         </a>
-        <a href="/">
-            <button type="cancel" class="save btn btn-default">No</button>
+            <a href="{% url 'home' %}"><button type="button" class="save btn btn-default">No</button>
         </a>
 
     </form>

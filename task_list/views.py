@@ -104,6 +104,8 @@ class TaskDelete(DeleteView):
         return self.model.objects.filter(assigned=self.request.user)
 
 
+
+
 def handler404(request, exception, template_name='404.html'):
     response = render_to_response('404.html', {},
                                   context_instance=RequestContext(request))
