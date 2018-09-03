@@ -1,31 +1,35 @@
 ## Task application on Django
 
-Features:
+### Features:
 - users can login to their accounts;
 - then they see a list of everyones tasks;
 - available buttons: add, edit(owner only), mark done, delete(owner only), hide completed tasks;
 - after add task it will assigned to creator;
-
 - tests for code.
 
-Requirements:
+### Requirements:
 - django 2.1
 - python 3.5
 - bootstrap 3.3.7
 - jquery 3.3.1
 
-Also there is provided a test user and test data in fixtures:
-1. login - admin, password - 'adminadmin'
-2. login - developer1, password - 'dev12345'
-You can load it by command:
-```bash
-python manage.py loaddata task_list/fixtures/initial.json
-```
+Also there is provided a test user and test data in fixtures. 
+For log in to the site you can use next credentials(from fixtures)
+- login - admin, password - 'adminadmin'
+- login - developer1, password - 'dev12345'
+- login - developer2, password - 'dev12345'
 
-Commands:
-```
+
+###Instructions:
+
+Clone the project and go to the project folder. You can use next commands:
+
+```bash
+ $ pip install -r requirements.txt
  $ python manage.py migrate
- $ python manage.py createsuperuser - if needed
  $ python manage.py runserver
+```
+Run tests:
+```bash
  $ python manage.py test
 ```
