@@ -1,0 +1,1 @@
+web: qunicorn task_app.wsgi --log-file--

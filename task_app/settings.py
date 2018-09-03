@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j62c84j5^+2k&d2w**7rv^*g!+t)0eg*&ggk@@__n$v0g$1)7*'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'j62c84j5^+2k&d2w**7rv^*g!+t)0eg*&ggk@@__n$v0g$1)7*')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -71,15 +71,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'task_app.wsgi.application'
 
+import dj_database_url
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(conn_max_age=600)
 }
 
 
@@ -125,3 +122,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+import django_heroku
+
+django_heroku.settings(locals())
