@@ -25,7 +25,7 @@ SECRET_KEY = 'j62c84j5^+2k&d2w**7rv^*g!+t)0eg*&ggk@@__n$v0g$1)7*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'krocozabr.pythonanywhere.com', ]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'community.pythonanywhere.com']
 
 LOGIN_REDIRECT_URL = 'home'
 
