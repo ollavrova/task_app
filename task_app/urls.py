@@ -16,13 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path
-from task_list import views
-from task_list.views import TaskDetail, TaskUpdate, TaskDelete, TaskCreate, TaskDone
+from task_list.views import TaskDetail, TaskUpdate, TaskDelete, TaskCreate, TaskDone, TaskList
 from django.contrib.auth.decorators import login_required
 
 
 urlpatterns = [
-    path('', views.TaskList.as_view(), name='home'),
+    path('', login_required(TaskList.as_view()), name='home'),
     path('admin/', admin.site.urls),
     path('accounts/login/', auth_views.LoginView.as_view(), {'template_name': 'login.html'}, name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
