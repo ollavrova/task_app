@@ -8,7 +8,7 @@
             <p>Created: {{ object.created|date:"d.m.Y H:i" }}</p>
             <p>Description: {{ object.description }}</p>
             <p>Assigned: {{ object.assigned }}</p>
-            <p>Status: {{ status|yesno:"done,undone" }}</p>
+            <p>Status: {{ object.status|yesno:"done,undone" }}</p>
             {% if object.done_by %}
                 <p>Done by: {{ object.done_by }} </p>
                 <p>Done date: {{ object.done_date|date:"d.m.Y H:i" }} </p>
