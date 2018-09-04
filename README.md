@@ -1,4 +1,4 @@
-## Task application on Django
+## Task application management on Django
 
 ### Features:
 - users can login to their accounts;
