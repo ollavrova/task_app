@@ -1,11 +1,13 @@
-## Task application management on Django
+## Task management application
 
+ - deployed to https://fierce-brook-54192.herokuapp.com/ and http://krocozabr.pythonanywhere.com/ 
+ 
 ### Features:
 - users can login to their accounts;
 - then they see a list of everyones tasks;
-- available buttons: add, edit(owner only), mark done, delete(owner only), hide completed tasks;
-- after add task it will assigned to creator;
-- tests for code.
+- available actions: add, edit(owner only), mark done, delete(owner only), hide completed tasks;
+- after adding task it can be assigned to anyone or it will assigned to creator by system;
+- tests for code included(Selenium and unit tests).
 
 ### Requirements:
 - django 2.1
@@ -29,7 +31,9 @@ Clone the project and go to the project folder. You can use next commands:
  $ python manage.py migrate
  $ python manage.py runserver
 ```
+
 Run tests:
+
 ```bash
  $ python manage.py test
 ```
