@@ -1,6 +1,6 @@
 ## Task management application
 
- - deployed to https://fierce-brook-54192.herokuapp.com/ and http://krocozabr.pythonanywhere.com/ 
+ - deployed to https://fierce-brook-54192.herokuapp.com/
  
 ### Features:
 - users can login to their accounts;
